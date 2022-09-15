@@ -11,7 +11,7 @@ class Stack():
 
     #add - method that add a new value to the stack 
     #and add a new value in sorted list in the right place
-    def add (self, data):
+    def Add (self, data):
         self.items.append(data)
         self.sorted.append(data)
         i = 2
@@ -22,7 +22,7 @@ class Stack():
         self.lenght += 1
 
     #pop - method that delete last value from stack and the same value from sorted list
-    def pop (self):
+    def Pop (self):
         data = self.items.pop()
         i = 1
         while (data != self.sorted[-i]):
@@ -31,7 +31,7 @@ class Stack():
         self.lenght -= 1
 
     #Max - method that returns maximum value of stack
-    def max(self):
+    def Max(self):
         print(self.sorted[-1])
 
     
