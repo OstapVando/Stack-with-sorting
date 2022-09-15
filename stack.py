@@ -11,7 +11,7 @@ class Stack():
 
     #add - method that add a new value to the stack 
     #and add a new value in sorted list in the right place
-    def Add (self, data):
+    def Push (self, data):
         self.items.append(data)
         self.sorted.append(data)
         i = 2
