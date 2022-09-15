@@ -35,3 +35,18 @@ class Stack():
         print(self.sorted[-1])
 
     
+if __name__ == '__main__':
+    stack = Stack()
+
+    num_queries = int(sys.stdin.readline())
+    for i in range(num_queries):
+        query = sys.stdin.readline().split()
+
+        if query[i] == "push":
+            stack.Push(int(query[1]))
+        elif query[i] == "pop":
+            stack.Pop()
+        elif query[i] == "max":
+            print(stack.Max())
+        else:
+            assert(0)
