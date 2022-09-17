@@ -8,8 +8,8 @@ class Stack():
         
     def Push (self, data):
         self.items = np.append(self.items, data)
-        self.sorted = np.append(self.sorted, data)
-        self.sorted = np.sort(self.sorted, kind='heapsort')
+        index = np.searchsorted(self.sorted, data)
+        self.sorted = np.insert(arr=self.sorted, obj=index, values=data)
         #print(self.items, self.sorted)
 
     def Pop (self):
